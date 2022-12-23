@@ -1,4 +1,3 @@
-# advent of code 2022
+# advent-of-code
 
-Learning rust! To run each project, cd into the project you want to run and execute `cargo run --release`.
-
+- [2022](./2022)
