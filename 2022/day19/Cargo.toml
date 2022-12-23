@@ -5,4 +5,9 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[lib]
+path = "src/main.rs"
+
 [dependencies]
+num-integer = "0.1.45"
+regex = "1.7.0"
