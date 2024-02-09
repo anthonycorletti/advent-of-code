@@ -27,21 +27,10 @@ class Calibrator
     end
 
     def map_words_to_numbers(s)
-        # find the first number that appears from the left of the string it can be a number or a word that matches REGEXP
-        # find the first number that appears from the right of the string it can be a number or a word that matches REGEXP_LAST
-
-        left_num = s[REGEXP]
-        right_num = s[REGEXP_LAST, 1]
-
-        # if the left number is a word, map it to a number
+        left_num, right_num = s[REGEXP], s[REGEXP_LAST, 1]
         left_num = @@words_to_numbers[left_num] if @@words_to_numbers[left_num]
-
-        # if the right number is a word, map it to a number
         right_num = @@words_to_numbers[right_num] if @@words_to_numbers[right_num]
-
-        # if the left number is nil, then the right number is the only number in the string
         left_num = right_num if left_num.nil?
-
         "#{left_num}#{right_num}".to_i
     end
 
@@ -50,5 +39,6 @@ class Calibrator
     end
 end
 
-puts Calibrator.new(file_path="input.txt").part_one
-puts Calibrator.new(file_path="input.txt").part_two
+c = Calibrator.new(file_path="input.txt")
+puts c.part_one
+puts c.part_two
