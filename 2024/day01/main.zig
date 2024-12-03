@@ -1,5 +1,5 @@
 // pair up the smallest number in the left and right lists, second smallest and so on
-// find out how far apart the teo nuimbers are and add up all of those distances
+// find out how far apart the two numbers are and add up all of those distances
 
 const std = @import("std");
 const Allocator = std.mem.Allocator;
