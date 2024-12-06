@@ -1,6 +1,5 @@
 const std = @import("std");
 const log = std.log.scoped(.aoc2024);
-const splitScalar = std.mem.splitScalar;
 
 pub fn main() !void {
     const part1_input = std.mem.trimRight(u8, @embedFile("part1.txt"), "\n");
